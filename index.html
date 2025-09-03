@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dipesh Tamang - Marketing Representative & Officer</title>
+    <meta
+      name="description"
+      content="Dipesh Tamang - Marketing Representative and Marketing Officer. Building brands with creative, impactful marketing strategies."
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="logo">Dipesh Tamang</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="mobile-menu" id="mobileMenu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1 class="fade-in">
+          I'm <span class="typing-text">Dipesh Tamang</span>
+        </h1>
+        <h2 class="fade-in">Marketing Representative | Marketing Officer</h2>
+        <p class="fade-in">
+          Building brands with creative, impactful marketing strategies that
+          drive growth and engagement.
+        </p>
+        <div class="cta-buttons fade-in">
+          <a href="#contact" class="btn btn-primary">
+            <i class="fas fa-handshake"></i>
+            Hire Me
+          </a>
+          <a href="#portfolio" class="btn btn-secondary">
+            <i class="fas fa-eye"></i>
+            View Portfolio
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">About Me</h2>
+        <div class="about-content">
+          <div class="about-image animate-on-scroll slide-in-left">
+            <div class="about-image-placeholder">
+              <i class="fas fa-user"></i>
+            </div>
+          </div>
+          <div class="about-text animate-on-scroll slide-in-right">
+            <h3>Passionate Marketing Professional</h3>
+            <p>
+              With years of experience in marketing strategy and brand
+              development, I specialize in creating compelling campaigns that
+              resonate with target audiences and drive measurable results.
+            </p>
+            <p>
+              My expertise spans across digital marketing, brand positioning,
+              customer engagement, and data-driven campaign optimization. I
+              believe in the power of storytelling and strategic thinking to
+              build lasting brand relationships.
+            </p>
+
+            <div class="skills">
+              <span class="skill-tag">Digital Marketing</span>
+              <span class="skill-tag">Brand Strategy</span>
+              <span class="skill-tag">Campaign Management</span>
+              <span class="skill-tag">Analytics</span>
+              <span class="skill-tag">Social Media</span>
+              <span class="skill-tag">Content Strategy</span>
+            </div>
+
+            <a href="#" class="btn btn-primary" onclick="downloadCV()">
+              <i class="fas fa-download"></i>
+              Download CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section class="services section" id="services">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">My Services</h2>
+        <p class="section-subtitle animate-on-scroll">
+          Comprehensive marketing solutions tailored to your business needs
+        </p>
+
+        <div class="services-grid">
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Marketing Strategy</h3>
+            <p>
+              Comprehensive marketing strategies that align with your business
+              goals and target audience, ensuring maximum ROI and brand growth.
+            </p>
+          </div>
+
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3>Brand Development</h3>
+            <p>
+              Creating strong, memorable brand identities that resonate with
+              your audience and differentiate you from competitors.
+            </p>
+          </div>
+
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon">
+              <i class="fas fa-chart-bar"></i>
+            </div>
+            <h3>Digital Campaigns</h3>
+            <p>
+              Data-driven digital marketing campaigns across multiple platforms
+              to increase visibility, engagement, and conversions.
+            </p>
+          </div>
+
+          <div class="service-card animate-on-scroll">
+            <div class="service-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3>Client Engagement</h3>
+            <p>
+              Building lasting relationships with clients through strategic
+              communication and personalized marketing approaches.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio section" id="portfolio">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">My Work</h2>
+        <p class="section-subtitle animate-on-scroll">
+          A showcase of successful marketing campaigns and projects
+        </p>
+
+        <div class="portfolio-filters animate-on-scroll">
+          <button class="filter-btn active" data-filter="all">
+            All Projects
+          </button>
+          <button class="filter-btn" data-filter="campaigns">Campaigns</button>
+          <button class="filter-btn" data-filter="projects">Projects</button>
+          <button class="filter-btn" data-filter="personal">Personal</button>
+        </div>
+
+        <div class="portfolio-grid" id="portfolioGrid">
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="campaigns"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Brand Launch Campaign</h3>
+              <p>
+                Comprehensive launch strategy for a tech startup, resulting in
+                300% increase in brand awareness.
+              </p>
+              <span class="portfolio-category">Campaign</span>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="projects"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Social Media Strategy</h3>
+              <p>
+                Multi-platform social media strategy that increased engagement
+                by 250% and followers by 400%.
+              </p>
+              <span class="portfolio-category">Project</span>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="campaigns"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Product Marketing</h3>
+              <p>
+                Integrated marketing campaign for product launch, achieving 150%
+                of sales targets in first quarter.
+              </p>
+              <span class="portfolio-category">Campaign</span>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="personal"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Marketing Automation</h3>
+              <p>
+                Personal project developing automated email marketing workflows
+                that improved conversion rates by 180%.
+              </p>
+              <span class="portfolio-category">Personal</span>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="projects"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Analytics Dashboard</h3>
+              <p>
+                Custom marketing analytics dashboard providing real-time
+                insights and performance metrics.
+              </p>
+              <span class="portfolio-category">Project</span>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="campaigns"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-globe"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Global Rebranding</h3>
+              <p>
+                Led complete rebranding initiative for international company,
+                enhancing brand recognition across 12 markets.
+              </p>
+              <span class="portfolio-category">Campaign</span>
+            </div>
+          </div>
+        </div>
+        <!-- button -->
+      </div>
+      <div class="cta-buttons fade-in">
+        <a
+          href="./assets/projects/projects_page.html"
+          class="btn btn-secondary"
+          style="margin-top: 50px"
+        >
+          View All Project
+        </a>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <!-- <section class="testimonials section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">What Clients Say</h2>
+        <div class="testimonial-slider animate-on-scroll">
+          <div class="testimonial">
+            <p>
+              "Dipesh's marketing expertise transformed our brand presence. His
+              strategic approach and creative campaigns delivered exceptional
+              results that exceeded our expectations."
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">AS</div>
+              <div class="testimonial-info">
+                <h4>Arjun Shah</h4>
+                <span>CEO, TechVision</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Get In Touch</h2>
+        <p class="section-subtitle animate-on-scroll">
+          Ready to elevate your brand? Let's discuss your marketing goals
+        </p>
+
+        <div class="contact-content">
+          <div class="contact-info animate-on-scroll slide-in-left">
+            <h3>Let's Work Together</h3>
+            <p>
+              I'm always excited to work on new projects and help businesses
+              achieve their marketing goals. Feel free to reach out for
+              collaborations or consultations.
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>dipesh.tamang@email.com</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+977-98XXXXXXXX</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Kathmandu, Nepal</span>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="social-link" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social-link" title="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-link" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-link" title="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <form
+            class="contact-form animate-on-scroll slide-in-right"
+            onsubmit="handleSubmit(event)"
+          >
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Tell me about your project..."
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%">
+              <i class="fas fa-paper-plane"></i>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Dipesh Tamang. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- scripts -->
+    <script src="./assets/javascripts/scripts.js"></script>
+  </body>
+</html>

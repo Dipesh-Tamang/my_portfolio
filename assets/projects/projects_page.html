@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Dipesh Tamang</title>
+    <meta
+      name="description"
+      content="Explore the complete portfolio of Dipesh Tamang's marketing campaigns and projects."
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-blue: #2563eb;
+        --dark-blue: #1e40af;
+        --light-blue: #60a5fa;
+        --black: #0f172a;
+        --white: #ffffff;
+        --gray-light: #f8fafc;
+        --gray-medium: #64748b;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.15);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        color: var(--black);
+        overflow-x: hidden;
+        background: var(--gray-light);
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+
+      .slide-in-left {
+        animation: slideInLeft 0.8s ease-out forwards;
+      }
+
+      .slide-in-right {
+        animation: slideInRight 0.8s ease-out forwards;
+      }
+
+      /* Navigation */
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        padding: 1rem 0;
+        box-shadow: var(--shadow);
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-blue);
+        text-decoration: none;
+      }
+
+      .back-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--primary-blue);
+        color: var(--white);
+        text-decoration: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .back-btn:hover {
+        background: var(--dark-blue);
+        transform: translateY(-2px);
+      }
+
+      /* Page Header */
+      .page-header {
+        padding: 120px 0 60px;
+        background: linear-gradient(
+          135deg,
+          var(--gray-light) 0%,
+          var(--white) 100%
+        );
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .page-header::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(37, 99, 235, 0.1) 0%,
+          transparent 70%
+        );
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .page-header-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .page-header h1 {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 700;
+        margin-bottom: 1rem;
+        background: linear-gradient(
+          135deg,
+          var(--primary-blue),
+          var(--dark-blue)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .page-header p {
+        font-size: 1.2rem;
+        color: var(--gray-medium);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Container */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      /* Projects Section */
+      .projects-section {
+        padding: 60px 0;
+      }
+
+      /* Portfolio Filters */
+      .portfolio-filters {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+      }
+
+      .filter-btn {
+        padding: 0.8rem 1.5rem;
+        background: transparent;
+        border: 2px solid var(--primary-blue);
+        color: var(--primary-blue);
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        font-family: inherit;
+      }
+
+      .filter-btn.active,
+      .filter-btn:hover {
+        background: var(--primary-blue);
+        color: var(--white);
+      }
+
+      /* Portfolio Grid */
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .portfolio-item {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: all 0.3s ease;
+        background: var(--white);
+      }
+
+      .portfolio-item:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .portfolio-image {
+        height: 250px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-blue),
+          var(--light-blue)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+        font-size: 3rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .portfolio-image::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .portfolio-item:hover .portfolio-image::before {
+        opacity: 1;
+      }
+
+      .portfolio-content {
+        padding: 1.5rem;
+      }
+
+      .portfolio-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: var(--black);
+      }
+
+      .portfolio-content p {
+        color: var(--gray-medium);
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      .portfolio-category {
+        display: inline-block;
+        background: var(--gray-light);
+        color: var(--primary-blue);
+        padding: 0.3rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+
+      .project-stats {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .stat {
+        font-size: 0.8rem;
+        color: var(--gray-medium);
+      }
+
+      .stat i {
+        color: var(--primary-blue);
+        margin-right: 0.3rem;
+      }
+
+      /* Animation Classes */
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+
+      .animate-on-scroll.animated {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Footer */
+      .footer {
+        background: var(--black);
+        color: var(--white);
+        text-align: center;
+        padding: 3rem 0 2rem;
+        margin-top: 4rem;
+      }
+
+      /* Scroll to Top */
+      .scroll-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 50px;
+        height: 50px;
+        background: var(--primary-blue);
+        color: var(--white);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      .scroll-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .scroll-top:hover {
+        background: var(--dark-blue);
+        transform: translateY(-3px);
+      }
+
+      /* Mobile Navigation */
+      .mobile-menu {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--black);
+        z-index: 1001;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .container {
+          padding: 0 1rem;
+        }
+
+        .portfolio-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .portfolio-filters {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .filter-btn {
+          width: 200px;
+          text-align: center;
+        }
+
+        .nav-container {
+          padding: 0 1rem;
+        }
+
+        .back-btn {
+          padding: 0.6rem 1rem;
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .page-header {
+          padding: 100px 0 40px;
+        }
+
+        .projects-section {
+          padding: 40px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="../../index.html" class="logo">Dipesh Tamang</a>
+        <a href="../../index.html#portfolio" class="back-btn">
+          <i class="fas fa-arrow-left"></i>
+          Home
+        </a>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-content">
+          <h1 class="fade-in">My Projects</h1>
+          <p class="fade-in">
+            Explore my complete collection of marketing campaigns, brand
+            strategies, and creative projects
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+      <div class="container">
+        <!-- Portfolio Filters -->
+        <div class="portfolio-filters animate-on-scroll">
+          <button class="filter-btn active" data-filter="all">
+            All Projects
+          </button>
+          <button class="filter-btn" data-filter="campaigns">Campaigns</button>
+          <button class="filter-btn" data-filter="projects">Projects</button>
+          <button class="filter-btn" data-filter="personal">Personal</button>
+          <button class="filter-btn" data-filter="branding">Branding</button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid" id="portfolioGrid">
+          <!-- Campaign Projects -->
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="campaigns"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Brand Launch Campaign</h3>
+              <p>
+                Comprehensive launch strategy for a tech startup, resulting in
+                300% increase in brand awareness and successful market entry
+                across multiple platforms.
+              </p>
+              <span class="portfolio-category">Campaign</span>
+              <div class="project-stats">
+                <span class="stat"
+                  ><i class="fas fa-calendar"></i> 6 months</span
+                >
+                <span class="stat"
+                  ><i class="fas fa-chart-line"></i> 300% growth</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="campaigns"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Product Marketing Campaign</h3>
+              <p>
+                Integrated marketing campaign for product launch, achieving 150%
+                of sales targets in first quarter through strategic positioning
+                and targeted advertising.
+              </p>
+              <span class="portfolio-category">Campaign</span>
+              <div class="project-stats">
+                <span class="stat"
+                  ><i class="fas fa-calendar"></i> 3 months</span
+                >
+                <span class="stat"
+                  ><i class="fas fa-target"></i> 150% target</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="campaigns"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-globe"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Global Rebranding Campaign</h3>
+              <p>
+                Led complete rebranding initiative for international company,
+                enhancing brand recognition across 12 markets and increasing
+                customer loyalty by 85%.
+              </p>
+              <span class="portfolio-category">Campaign</span>
+              <div class="project-stats">
+                <span class="stat"
+                  ><i class="fas fa-calendar"></i> 12 months</span
+                >
+                <span class="stat"
+                  ><i class="fas fa-globe"></i> 12 markets</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="campaigns"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Community Engagement Campaign</h3>
+              <p>
+                Developed a community-driven marketing campaign that increased
+                local brand awareness by 400% and established lasting community
+                partnerships.
+              </p>
+              <span class="portfolio-category">Campaign</span>
+              <div class="project-stats">
+                <span class="stat"
+                  ><i class="fas fa-calendar"></i> 4 months</span
+                >
+                <span class="stat"
+                  ><i class="fas fa-users"></i> 10K+ engaged</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Works -->
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="projects"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Social Media Strategy</h3>
+              <p>
+                Multi-platform social media strategy that increased engagement
+                by 250% and followers by 400% through content optimization and
+                community building.
+              </p>
+              <span class="portfolio-category">Project</span>
+              <div class="project-stats">
+                <span class="stat"
+                  ><i class="fas fa-calendar"></i> Ongoing</span
+                >
+                <span class="stat"
+                  ><i class="fas fa-thumbs-up"></i> 250% engagement</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="projects"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Analytics Dashboard</h3>
+              <p>
+                Custom marketing analytics dashboard providing real-time
+                insights and performance metrics, improving decision-making
+                speed by 60%.
+              </p>
+              <span class="portfolio-category">Project</span>
+              <div class="project-stats">
+                <span class="stat"
+                  ><i class="fas fa-calendar"></i> 2 months</span
+                >
+                <span class="stat"
+                  ><i class="fas fa-tachometer-alt"></i> Real-time data</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="projects"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Email Marketing Optimization</h3>
+              <p>
+                Redesigned email marketing workflows resulting in 180%
+                improvement in open rates and 220% increase in click-through
+                rates.
+              </p>
+              <span class="portfolio-category">Project</span>
+              <div class="project-stats">
+                <span class="stat"
+                  ><i class="fas fa-calendar"></i> 3 months</span
+                >
+                <span class="stat"
+                  ><i class="fas fa-percentage"></i> 180% open rate</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="projects"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-search"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>SEO Strategy Implementation</h3>
+              <p>
+                Comprehensive SEO strategy that improved organic search rankings
+                by 300% and increased website traffic by 450% within 8 months.
+              </p>
+              <span class="portfolio-category">Project</span>
+              <div class="project-stats">
+                <span class="stat"
+                  ><i class="fas fa-calendar"></i> 8 months</span
+                >
+                <span class="stat"
+                  ><i class="fas fa-search"></i> 300% ranking</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Personal Projects -->
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="personal"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Marketing Automation Tool</h3>
+              <p>
+                Personal project developing automated email marketing workflows
+                and customer journey mapping that improved conversion rates by
+                180%.
+              </p>
+              <span class="portfolio-category">Personal</span>
+              <div class="project-stats">
+                <span class="stat"
+                  ><i class="fas fa-calendar"></i> 8 months</span
+                >
+                <span class="stat"
+                  ><i class="fas fa-star"></i> 4.8/5 rating</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Branding Projects -->
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="branding"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Restaurant Brand Identity</h3>
+              <p>
+                Complete brand identity design for upscale restaurant chain,
+                including logo, color palette, and marketing materials that
+                increased customer recognition by 200%.
+              </p>
+              <span class="portfolio-category">Branding</span>
+              <div class="project-stats">
+                <span class="stat"
+                  ><i class="fas fa-calendar"></i> 4 months</span
+                >
+                <span class="stat"
+                  ><i class="fas fa-eye"></i> 200% recognition</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="branding"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-store"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>E-commerce Brand Redesign</h3>
+              <p>
+                Modernized e-commerce brand identity and user experience,
+                resulting in 180% increase in online sales and improved customer
+                satisfaction scores.
+              </p>
+              <span class="portfolio-category">Branding</span>
+              <div class="project-stats">
+                <span class="stat"
+                  ><i class="fas fa-calendar"></i> 5 months</span
+                >
+                <span class="stat"
+                  ><i class="fas fa-shopping-cart"></i> 180% sales</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="projects"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-video"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Video Marketing Strategy</h3>
+              <p>
+                Comprehensive video content strategy for B2B company, increasing
+                video engagement by 400% and generating 50+ qualified leads
+                monthly.
+              </p>
+              <span class="portfolio-category">Project</span>
+              <div class="project-stats">
+                <span class="stat"
+                  ><i class="fas fa-calendar"></i> 6 months</span
+                >
+                <span class="stat"
+                  ><i class="fas fa-play"></i> 400% engagement</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="campaigns"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-gift"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Holiday Marketing Campaign</h3>
+              <p>
+                Seasonal marketing campaign for retail client that generated
+                250% increase in holiday sales and established new customer
+                acquisition records.
+              </p>
+              <span class="portfolio-category">Campaign</span>
+              <div class="project-stats">
+                <span class="stat"
+                  ><i class="fas fa-calendar"></i> 2 months</span
+                >
+                <span class="stat"><i class="fas fa-gift"></i> 250% sales</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="projects"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Partnership Marketing</h3>
+              <p>
+                Strategic partnership marketing initiative that created mutually
+                beneficial collaborations, expanding market reach by 300% for
+                all involved parties.
+              </p>
+              <span class="portfolio-category">Project</span>
+              <div class="project-stats">
+                <span class="stat"
+                  ><i class="fas fa-calendar"></i> 6 months</span
+                >
+                <span class="stat"
+                  ><i class="fas fa-expand"></i> 300% reach</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="branding"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Sustainable Brand Positioning</h3>
+              <p>
+                Repositioned eco-friendly brand to emphasize sustainability
+                values, resulting in 160% increase in environmentally conscious
+                customer base.
+              </p>
+              <span class="portfolio-category">Branding</span>
+              <div class="project-stats">
+                <span class="stat"
+                  ><i class="fas fa-calendar"></i> 7 months</span
+                >
+                <span class="stat"
+                  ><i class="fas fa-leaf"></i> Eco-focused</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="personal"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-podcast"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Marketing Podcast</h3>
+              <p>
+                Started and hosted marketing podcast featuring industry experts,
+                reaching 5K+ downloads per episode and building professional
+                network.
+              </p>
+              <span class="portfolio-category">Personal</span>
+              <div class="project-stats">
+                <span class="stat"><i class="fas fa-calendar"></i> 1 year</span>
+                <span class="stat"
+                  ><i class="fas fa-download"></i> 5K+ downloads</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="campaigns"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-award"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Award-Winning Campaign</h3>
+              <p>
+                Creative marketing campaign that won Regional Marketing
+                Excellence Award and generated 500% ROI for luxury goods client.
+              </p>
+              <span class="portfolio-category">Campaign</span>
+              <div class="project-stats">
+                <span class="stat"
+                  ><i class="fas fa-calendar"></i> 4 months</span
+                >
+                <span class="stat"
+                  ><i class="fas fa-trophy"></i> Award winner</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item animate-on-scroll"
+            data-category="projects"
+          >
+            <div class="portfolio-image">
+              <i class="fas fa-users-cog"></i>
+            </div>
+            <div class="portfolio-content">
+              <h3>Customer Segmentation</h3>
+              <p>
+                Advanced customer segmentation project using data analytics to
+                create targeted marketing approaches, improving conversion rates
+                by 140%.
+              </p>
+              <span class="portfolio-category">Project</span>
+              <div class="project-stats">
+                <span class="stat"
+                  ><i class="fas fa-calendar"></i> 3 months</span
+                >
+                <span class="stat"
+                  ><i class="fas fa-chart-line"></i> 140% conversion</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Dipesh Tamang. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; color: var(--gray-medium)">
+          Built with passion for marketing excellence
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+      // Animate elements on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animated");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+        observer.observe(el);
+      });
+
+      // Portfolio filter functionality
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          // Remove active class from all buttons
+          filterButtons.forEach((btn) => btn.classList.remove("active"));
+          // Add active class to clicked button
+          button.classList.add("active");
+
+          const filter = button.getAttribute("data-filter");
+
+          portfolioItems.forEach((item) => {
+            const category = item.getAttribute("data-category");
+
+            if (filter === "all" || category === filter) {
+              item.style.display = "block";
+              item.style.animation = "fadeIn 0.5s ease-out";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // Scroll functionality
+      window.addEventListener("scroll", () => {
+        const scrollTop = document.getElementById("scrollTop");
+
+        if (window.scrollY > 100) {
+          scrollTop.classList.add("visible");
+        } else {
+          scrollTop.classList.remove("visible");
+        }
+      });
+
+      // Scroll to top functionality
+      document.getElementById("scrollTop").addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Add hover effects to portfolio items
+      document.querySelectorAll(".portfolio-item").forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+          const image = item.querySelector(".portfolio-image");
+          image.style.transform = "scale(1.05)";
+        });
+
+        item.addEventListener("mouseleave", () => {
+          const image = item.querySelector(".portfolio-image");
+          image.style.transform = "scale(1)";
+        });
+      });
+
+      // Add loading animation delay to elements
+      document.querySelectorAll(".animate-on-scroll").forEach((el, index) => {
+        el.style.animationDelay = `${index * 0.1}s`;
+      });
+
+      // Add smooth entrance animations
+      window.addEventListener("load", () => {
+        document.body.style.opacity = "1";
+        document.body.style.transition = "opacity 0.5s ease-in-out";
+      });
+
+      // Performance optimization - lazy load animations
+      const lazyAnimationObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.willChange = "transform, opacity";
+          } else {
+            entry.target.style.willChange = "auto";
+          }
+        });
+      });
+
+      document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+        lazyAnimationObserver.observe(el);
+      });
+    </script>
+  </body>
+</html>
