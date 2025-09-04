@@ -227,7 +227,7 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(3rem, 8vw, 5rem);
+  font-size: 50px;
   font-weight: 700;
   margin-bottom: 1rem;
   background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
