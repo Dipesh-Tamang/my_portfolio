@@ -227,7 +227,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 50px;
+  font-size: clamp(3rem, 8vw, 5rem);
   font-weight: 700;
   margin-bottom: 1rem;
   background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
@@ -780,7 +780,15 @@ body {
   .nav-links {
     display: none;
   }
-
+  .hero h1 {
+    font-size: 40px;
+  }
+  .hero h2 {
+    font-size: 20px;
+  }
+  .hero p {
+    font-size: 12px;
+  }
   .mobile-menu {
     display: block;
   }
